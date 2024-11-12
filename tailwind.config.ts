@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'blueBlack': "#14213D",
+        'spaceGold': "#FCA311",
       },
     },
   },
