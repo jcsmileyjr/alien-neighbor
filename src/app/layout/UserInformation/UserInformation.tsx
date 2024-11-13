@@ -15,7 +15,8 @@ export default function UserInformation() {
     return (
         <div>
             <InputText name="user_name" label="Legal Name" onUpdate={onChangeName} />
-            <InputText name="user_illegal_name" label="Illegal Name, Nickname, Alias" onUpdate={onChangeIllegalName} />
+            <InputText name="user_illegal_name" label="Illegal Name, Nickname, Alias" onUpdate={onChangeIllegalName} notes="We don’t judge. Everyone, regardless of reasons running from earth, is welcome." />
+
             <p>{userName}</p>
             <p>{userIllegalName}</p>
         </div>
