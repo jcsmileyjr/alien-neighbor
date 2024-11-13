@@ -3,7 +3,7 @@ import UserInformation from "./layout/UserInformation/UserInformation";
 
 export default function Home() {
   return (
-    <div className="p-4 h-screen flex flex-col justify-between sm:mx-auto md:w-2/3 lg:w-1/2">
+    <div className="p-4 h-screen flex flex-col justify-between sm:mx-auto md:w-2/3 lg:w-1/2 2xl:w-1/3">
       <div className="flex flex-col gap-4">
         <Header />
         <main className="flex flex-col gap-4">
