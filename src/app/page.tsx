@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Header from "./components/Header/Header";
+import { setName } from "@/redux/features/userInformationSlice";
 
 export default function Home() {
   return (
