@@ -1,11 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type User = {
-    name: string
+    user_name: string
+    user_illegal_name?: string
 }
 
 const initialState: User = {
-    name: "",
+    user_name: "",
+    user_illegal_name: "",
 }
 
 export const userInformationSlice = createSlice({
@@ -13,11 +15,16 @@ export const userInformationSlice = createSlice({
     initialState,
     reducers: {
         setName: (state, action: PayloadAction<string>) => {
-            state.name = action.payload;
+            state.user_name = action.payload;
+            return state;
+        },
+        setIllegalName: (state, action: PayloadAction<string>) => {
+            state.user_illegal_name = action.payload;
             return state;
         },
     },
 });
 
 export const { setName } = userInformationSlice.actions;
+export const { setIllegalName } = userInformationSlice.actions;
 export default userInformationSlice.reducer;
