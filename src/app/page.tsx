@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import UserInformation from "./layout/UserInformation/UserInformation";
+import SubmitButton from "./components/SubmitButton/SubmitButton";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
             <UserInformation />
           </section>
           <section>
-            
+            {/* Living Space Preference */}
           </section>
+          <SubmitButton messageOne='Submit' messageTwo='To' />
         </main>
       </div>
       <footer className="text-center">
