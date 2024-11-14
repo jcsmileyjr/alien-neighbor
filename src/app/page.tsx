@@ -19,7 +19,7 @@ export default function Home() {
           <section>
             {/* Living Space Preference */}
           </section>
-          <SubmitButton messageOne='Submit' messageTwo='To' />
+          <SubmitButton messageOne='Submit' messageTwo='to Aliens' />
         </main>
       </div>
       <footer className="text-center">
