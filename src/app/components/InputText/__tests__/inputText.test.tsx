@@ -6,12 +6,12 @@ const {register} = useForm<User>();
 
 describe('InputText', () => {
     it('should render', () => {
-        render(<InputText register={register} name="user_name" label="Name" onUpdate={() => {}} />);
+        render(<InputText register={register} name="user_name" label="Name" />);
         expect(screen.getByLabelText('Name')).toBeInTheDocument();
     });
 
     it('should render notes', () => {        
-        render(<InputText register={register} name="user_name" label="Name" notes="Notes" onUpdate={() => {}} />);
+        render(<InputText register={register} name="user_name" label="Name" notes="Notes"/>);
         expect(screen.getByText('Notes')).toBeInTheDocument();
     });
 });
