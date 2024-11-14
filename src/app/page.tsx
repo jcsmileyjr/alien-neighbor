@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import UserInformation from "./layout/UserInformation/UserInformation";
+import SubmitButton from "./components/SubmitButton/SubmitButton";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
             <UserInformation />
           </section>
           <section>
-            
+            {/* Living Space Preference */}
           </section>
+          <SubmitButton messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
         </main>
       </div>
       <footer className="text-center">
