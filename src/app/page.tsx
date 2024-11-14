@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import UserInformation from "./layout/UserInformation/UserInformation";
+import SignUpForm from "./layout/SignUpForm/SignUpForm";
 import SubmitButton from "./components/SubmitButton/SubmitButton";
 
 export default function Home() {
@@ -13,13 +13,7 @@ export default function Home() {
             <p className="font-bold">Visit the stars and touch aliens</p>
             <p className="">Join the Colony Settlers</p>
           </section>
-          <section>
-            <UserInformation />
-          </section>
-          <section>
-            {/* Living Space Preference */}
-          </section>
-          <SubmitButton messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
+          <SignUpForm />          
         </main>
       </div>
       <footer className="text-center">
