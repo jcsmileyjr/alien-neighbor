@@ -1,13 +1,15 @@
 'use client';
 import InputText from "../../components/InputText/InputText";
-import { setName, setIllegalName, setCommuteDistance} from "@/redux/features/userInformationSlice";
+import { setName, setIllegalName, setRunSpeed } from "@/redux/features/userInformationSlice";
 import { AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import SubmitButton from "@/app/components/SubmitButton/SubmitButton";
 import SelectInput from "@/app/components/SelectInput/SelectInput";
+import RadioOptions from "@/app/components/RadioOptons/RadioOptions";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import commute from "@/app/lib/commute"; 
+import running from "@/app/lib/running";
 
 // Testing
 import { useAppSelector } from "@/redux/store";
@@ -24,7 +26,7 @@ export default function UserInformation() {
     const onSubmit: SubmitHandler<User> = (data) => {
         dispatch(setName(data.user_name));
         if(data.user_illegal_name) dispatch(setIllegalName(data.user_illegal_name));
-        if(data.user_commute_distance) dispatch(setCommuteDistance(data.user_commute_distance));
+        if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
     };
 
@@ -34,8 +36,7 @@ export default function UserInformation() {
                 <div>
                     <InputText register={register} name="user_name" label="Legal Name" />
                     <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don’t judge. Everyone, regardless of reasons running from Earth, is welcome." />
-                    <SelectInput register={register} name="user_commute_distance" label="How far do you mind commuting to work?" options={commute} />
-                    <SelectInput register={register} name="user_run_speed" label="How fast can you run while screaming 'HELP'" options={commute} />
+                    <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
                 <div>Living Space Preference</div>
             </form>
