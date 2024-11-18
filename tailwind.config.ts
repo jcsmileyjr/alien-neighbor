@@ -14,6 +14,7 @@ export default {
         'blueBlack': "#14213D",
         'spaceGold': "#FCA311",
         'offBlack': "#4A4A4A",
+        'offGray': "#F2F2F2",
       },
     },
   },
