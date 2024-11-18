@@ -7,6 +7,7 @@ import SubmitButton from "@/app/components/SubmitButton/SubmitButton";
 import SelectInput from "@/app/components/SelectInput/SelectInput";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
+import commute from "@/app/lib/commute"; 
 
 // Testing
 import { useAppSelector } from "@/redux/store";
@@ -33,7 +34,8 @@ export default function UserInformation() {
                 <div>
                     <InputText register={register} name="user_name" label="Legal Name" />
                     <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don’t judge. Everyone, regardless of reasons running from Earth, is welcome." />
-                    <SelectInput register={register} name="user_commute_distance" label="How far do you mind commuting to work?" />
+                    <SelectInput register={register} name="user_commute_distance" label="How far do you mind commuting to work?" options={commute} />
+                    <SelectInput register={register} name="user_run_speed" label="How fast can you run while screaming 'HELP'" options={commute} />
                 </div>
                 <div>Living Space Preference</div>
             </form>
