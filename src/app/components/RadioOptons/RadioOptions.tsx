@@ -6,7 +6,7 @@ export default function RadioOptions({ name, label, options, register }: { name:
         <div className="mb-4 flex flex-col items-center gap-4">       
             <label className="text-base font-bold text-blueBlack" htmlFor={name}>{label}</label>
             {options.map((option) => (
-                <div className="flex flex-row gap-4" key={`${name}-${option.split(' ').slice(0, 2).join(' ')}`}>
+                <div className="flex flex-row gap-4 w-full" key={`${name}-${option.split(' ').slice(0, 2).join(' ')}`}>
                     <input {...register(name, { required: true })} id={option.split(' ').slice(0, 2).join(' ')} type="radio" className="min-h-6 min-w-6 border border-spaceGold border-2 p-2 rounded accent-spaceGold active:accent-spaceGold checked:border-spaceGold checked:border-0" />
                     <label className="text-sm text-blueBlack" htmlFor={option.split(' ').slice(0, 2).join(' ')}>{option}</label>
                 </div>
