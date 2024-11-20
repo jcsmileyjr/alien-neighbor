@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import SubmitButton from "@/app/components/SubmitButton/SubmitButton";
 import SelectInput from "@/app/components/SelectInput/SelectInput";
 import RadioOptions from "@/app/components/RadioOptons/RadioOptions";
+import RadioValues from "@/app/components/RadioValues/RadioValues";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import commute from "@/app/lib/commute"; 
@@ -35,14 +36,21 @@ export default function UserInformation() {
         <section>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4">
-                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2">Personal Information 
+                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4">Personal Information 
                         <Image src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
                     <InputText register={register} name="user_name" label="Legal Name" />
                     <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don’t judge. Everyone, regardless of reasons running from Earth, is welcome." />
                     <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
-                <div>Living Space Preference</div>
+                <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4 mt-4">
+                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2  sm:pr-4">Living Space Preference
+                        <Image src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
+                    </p>
+                    <RadioValues name="mindAliens" content="Do you mind aliens?" />
+                    <RadioValues name="mindAliens" content="Can neighbors live nearby, but unknown." />
+                    <RadioValues name="mindAliens" content="Have you fantasized about petting 6’5 foot spiders in the dark where no one can hear you scream!" />
+                </div>
             </form>
 
             {/* Testing */}
