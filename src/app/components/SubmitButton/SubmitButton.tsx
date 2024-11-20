@@ -10,7 +10,7 @@ interface SubmitButtonProps {
 export default function SubmitButton({ handleSubmit, messageOne, messageTwo, notes }: SubmitButtonProps) {
     return (
         <>
-            <button type="button" onClick={handleSubmit} className="w-full group bg-spaceGold border border-blueBlack border-2 opacity-75 hover:opacity-100 text-blueBlack py-2 px-4 rounded">
+            <button type="button" onClick={handleSubmit} className="w-full group bg-spaceGold border border-blueBlack border-2 opacity-75 hover:opacity-100 text-blueBlack py-2 px-4 rounded mt-8">
                 <p className=" flex flex-row gap-2 justify-center">
                     {messageOne} <span className="group-hover:blur-none blur-sm font-bold ease-in duration-200">{messageTwo}</span>
                     <Image  src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
