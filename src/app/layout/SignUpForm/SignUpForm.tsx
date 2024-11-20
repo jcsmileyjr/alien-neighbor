@@ -42,7 +42,7 @@ export default function UserInformation() {
                     </p>
                     <InputText errors={errors} register={register} name="user_name" label="Legal Name" />
                     <InputText errors={errors} register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don&apos;t judge. Everyone, regardless of reasons running from Earth, is welcome." />
-                    <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
+                    <RadioOptions errors={errors} options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4 mt-8">
                     <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2  sm:pr-4">Living Space Preference
