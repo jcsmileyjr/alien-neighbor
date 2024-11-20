@@ -1,6 +1,5 @@
 import Header from "./components/Header/Header";
 import SignUpForm from "./layout/SignUpForm/SignUpForm";
-import SubmitButton from "./components/SubmitButton/SubmitButton";
 
 export default function Home() {
   return (
