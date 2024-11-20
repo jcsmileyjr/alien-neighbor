@@ -4,12 +4,10 @@ import { setName, setIllegalName, setRunSpeed } from "@/redux/features/userInfor
 import { AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import SubmitButton from "@/app/components/SubmitButton/SubmitButton";
-import SelectInput from "@/app/components/SelectInput/SelectInput";
 import RadioOptions from "@/app/components/RadioOptons/RadioOptions";
 import RadioValues from "@/app/components/RadioValues/RadioValues";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
-import commute from "@/app/lib/commute"; 
 import running from "@/app/lib/running";
 import Image from "next/image";
 
