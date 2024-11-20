@@ -40,7 +40,7 @@ export default function UserInformation() {
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
                     <InputText register={register} name="user_name" label="Legal Name" />
-                    <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don’t judge. Everyone, regardless of reasons running from Earth, is welcome." />
+                    <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don&apos;t judge. Everyone, regardless of reasons running from Earth, is welcome." />
                     <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4 mt-8">
@@ -49,7 +49,7 @@ export default function UserInformation() {
                     </p>
                     <RadioValues name="mindAliens" content="Do you mind aliens?" />
                     <RadioValues name="mindAliens" content="Can neighbors live nearby, but unknown." />
-                    <RadioValues name="mindAliens" content="Have you fantasized about petting 6’5 foot spiders in the dark where no one can hear you scream!" />
+                    <RadioValues name="mindAliens" content="Have you fantasized about petting 6&apos;5 foot spiders in the dark where no one can hear you scream!" />
                 </div>
             </form>
 

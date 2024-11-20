@@ -1,5 +1,5 @@
 const running: string[] = [
-    "Casual Jog: It's only an alien planet with spiders trying to snack on you.",
+    "Casual Jog: It&apos;s only an alien planet with spiders trying to snack on you.",
 
     "Sprint of Denial: Run as if you think you can actually escape.",
 
