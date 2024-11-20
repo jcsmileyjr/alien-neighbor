@@ -10,6 +10,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import commute from "@/app/lib/commute"; 
 import running from "@/app/lib/running";
+import Image from "next/image";
 
 // Testing
 import { useAppSelector } from "@/redux/store";
@@ -34,7 +35,9 @@ export default function UserInformation() {
         <section>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4">
-                    <p className="absolute -top-3 text-base text-blueBlack">Personal Information</p>
+                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2">Personal Information 
+                        <Image src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
+                    </p>
                     <InputText register={register} name="user_name" label="Legal Name" />
                     <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don’t judge. Everyone, regardless of reasons running from Earth, is welcome." />
                     <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
