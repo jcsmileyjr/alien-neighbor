@@ -16,7 +16,7 @@ import Swal from "sweetalert2";
 import { useAppSelector } from "@/redux/store";
 
 export default function UserInformation() {
-    const {register, handleSubmit} = useForm<User>();
+    const {register, handleSubmit, formState: { errors }} = useForm<User>();
     const dispatch = useDispatch<AppDispatch>();
 
     // Testing
@@ -29,6 +29,7 @@ export default function UserInformation() {
         if(data.user_illegal_name) dispatch(setIllegalName(data.user_illegal_name));
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
+        console.log(errors)
         Swal.fire("Thanks for testing this app. The app is a WIP");
     };
 
@@ -39,8 +40,8 @@ export default function UserInformation() {
                     <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4">Personal Information 
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
-                    <InputText register={register} name="user_name" label="Legal Name" />
-                    <InputText register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don&apos;t judge. Everyone, regardless of reasons running from Earth, is welcome." />
+                    <InputText errors={errors} register={register} name="user_name" label="Legal Name" />
+                    <InputText errors={errors} register={register} name="user_illegal_name" label="Illegal Name, Nickname, Alias" notes="We don&apos;t judge. Everyone, regardless of reasons running from Earth, is welcome." />
                     <RadioOptions options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4 mt-8">
