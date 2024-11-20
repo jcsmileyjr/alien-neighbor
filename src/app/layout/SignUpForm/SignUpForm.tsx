@@ -10,6 +10,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import running from "@/app/lib/running";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 // Testing
 import { useAppSelector } from "@/redux/store";
@@ -28,6 +29,7 @@ export default function UserInformation() {
         if(data.user_illegal_name) dispatch(setIllegalName(data.user_illegal_name));
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
+        Swal.fire("Thanks for testing this app. The app is a WIP");
     };
 
     return (
