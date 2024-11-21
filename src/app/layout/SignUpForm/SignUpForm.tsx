@@ -20,9 +20,9 @@ export default function UserInformation() {
     const dispatch = useDispatch<AppDispatch>();
 
     // Testing
-    const userName = useAppSelector((state: any) => state.userInformation.user_name);
-    const userIllegalName = useAppSelector((state: any) => state.userInformation.user_illegal_name);
-    const userCommuteDistance = useAppSelector((state: any) => state.userInformation.user_commute_distance);
+    const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
+    const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
+    const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
 
     const onSubmit: SubmitHandler<User> = (data) => {
         dispatch(setName(data.user_name));
