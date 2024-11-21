@@ -1,7 +1,7 @@
 import { UseFormRegister, FieldError } from "react-hook-form";
 import { User } from "@/User";
 
-export default function InputText({ name, label, notes, errors, register }: { name: "user_name" | "user_illegal_name", label: string, notes?: string, errors: FieldError | undefined, register: UseFormRegister<User> }) {
+const InputText = ({ name, label, notes, errors, register }: { name: "user_name" | "user_illegal_name", label: string, notes?: string, errors: FieldError | undefined, register: UseFormRegister<User> }) => {
     return (
         <div className="mb-4">
             <label className="text-base font-bold flex flex-row justify-between w-full" htmlFor={name}>{label} {errors && errors[name as keyof typeof errors] && <p className="text-sm text-red-500">Required</p>}</label>
@@ -11,3 +11,5 @@ export default function InputText({ name, label, notes, errors, register }: { na
         </div>
     );
 }
+
+export default InputText;
