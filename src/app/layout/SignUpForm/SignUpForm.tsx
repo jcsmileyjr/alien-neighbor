@@ -48,6 +48,10 @@ export default function UserInformation() {
                     <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2  sm:pr-4">Living Space Preference
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
+                    <div className="flex justify-end items-center gap-4 mb-2 text-blueBlack">
+                        <p>Yes</p>
+                        <p>It&apos;s Ok</p>
+                    </div>
                     <RadioValues name="mindAliens" content="Do you mind aliens?" />
                     <RadioValues name="nearbyAliens" content="Can neighbors live nearby, but unknown." />
                     <RadioValues name="pettingAliens" content="Have you fantasized about petting 6&apos;5 foot spiders in the dark where no one can hear you scream!" />
