@@ -7,7 +7,7 @@ export default function RadioOptions({ name, label, options, errors, register }:
             <label className="text-base font-bold text-blueBlack gap-4" htmlFor={name}>{label} {errors && errors[name as keyof typeof errors] &&<p className="text-sm text-red-500">Required</p>}</label>
             {options.map((option) => (
                 <div className="w-full" key={`${name}-${option.split(' ').slice(0, 2).join(' ')}`}>
-                    <label className="text-sm text-blueBlack flex flex-row gap-4 items-center" htmlFor={option.split(' ').slice(0, 2).join(' ')}>
+                    <label className="cursor-pointer text-sm text-blueBlack flex flex-row gap-4 items-center" htmlFor={option.split(' ').slice(0, 2).join(' ')}>
                         <input {...register(name, { required: true })} id={option.split(' ').slice(0, 2).join(' ')} type="radio" className="peer hidden" />
                         <div className="min-h-6 min-w-6 rounded-full border-2 border-blueBlack bg-white peer-checked:bg-spaceGold peer-checked:border-spaceGold transition-all"></div>
                         {option}
