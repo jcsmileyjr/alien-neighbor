@@ -7,15 +7,14 @@ export default function Home() {
       <div className="flex flex-col gap-4">
         <Header />
         <main className="flex flex-col gap-4">
-          <section className="text-center text-base">
-            <h2 className="font-extrabold text-xl">We Live Everywhere, even <span className="whitespace-nowrap">Dark Places</span></h2>
-            <p className="font-bold">Visit the stars and touch aliens</p>
+          <section className="text-center text-base mb-4">
+            <h2 className="font-extrabold text-xl">Visit the stars and touch aliens</h2>
             <p className="">Join the Colony Settlers</p>
           </section>
           <SignUpForm />          
         </main>
       </div>
-      <footer className="text-center">
+      <footer className="text-center mt-4">
         By JC Smiley
       </footer>
     </div>

@@ -5,8 +5,14 @@ export default function RadioValues({ name, content }: { name:string, content: s
         <div className="flex flex-row justify-between gap-8 mb-4">
             <label className="flex-1 font-bold" htmlFor={name}>{content}</label>
             <div className="flex flex-row gap-2">
-                <input className="min-h-6 min-w-6 border border-spaceGold border-2 p-2 rounded accent-spaceGold active:accent-spaceGold checked:border-spaceGold checked:border-0"  type="radio" name={name} id={`yes-${name}`} />            
-                <input className="min-h-6 min-w-6 border border-spaceGold border-2 p-2 rounded accent-spaceGold active:accent-spaceGold checked:border-spaceGold checked:border-0" type="radio" name={name} id={`ok-${name}`} /> 
+                <label className="cursor-pointer" htmlFor={`yes-${name}`}>
+                    <input className="peer hidden"  type="radio" name={name} id={`yes-${name}`} />            
+                    <div className="min-h-6 min-w-6 rounded-full border-2 border-blueBlack bg-white peer-checked:bg-spaceGold peer-checked:border-spaceGold transition-all"></div>
+                </label>
+                <label className="cursor-pointer" htmlFor={`ok-${name}`}>
+                    <input className="peer hidden" type="radio" name={name} id={`ok-${name}`} />
+                    <div className="min-h-6 min-w-6 rounded-full border-2 border-blueBlack bg-white peer-checked:bg-spaceGold peer-checked:border-spaceGold transition-all"></div>
+                </label>                
             </div>
         </div>
     )

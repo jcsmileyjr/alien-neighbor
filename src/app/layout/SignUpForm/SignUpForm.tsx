@@ -49,8 +49,8 @@ export default function UserInformation() {
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
                     <RadioValues name="mindAliens" content="Do you mind aliens?" />
-                    <RadioValues name="mindAliens" content="Can neighbors live nearby, but unknown." />
-                    <RadioValues name="mindAliens" content="Have you fantasized about petting 6&apos;5 foot spiders in the dark where no one can hear you scream!" />
+                    <RadioValues name="nearbyAliens" content="Can neighbors live nearby, but unknown." />
+                    <RadioValues name="pettingAliens" content="Have you fantasized about petting 6&apos;5 foot spiders in the dark where no one can hear you scream!" />
                 </div>
             </form>
 
