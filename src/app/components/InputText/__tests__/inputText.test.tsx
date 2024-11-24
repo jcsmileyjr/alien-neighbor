@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import InputText from '../InputText';
 import { User } from "@/User";
-import { useForm, FieldError } from "react-hook-form"
+import { useForm} from "react-hook-form"
 const {register, formState: { errors }} = useForm<User>();
 
 describe('InputText', () => {
