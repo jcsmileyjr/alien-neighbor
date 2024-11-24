@@ -14,7 +14,7 @@ export default function Home() {
           <SignUpForm />          
         </main>
       </div>
-      <footer className="text-center">
+      <footer className="text-center mt-4">
         By JC Smiley
       </footer>
     </div>
