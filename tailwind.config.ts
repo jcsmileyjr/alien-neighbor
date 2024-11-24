@@ -8,6 +8,20 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        flash: 'flash 0.5s ease-in-out 3', // 2 flashes in 0.5 seconds
+        ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) 3', // or set to infinite
+      },
+      keyframes: {
+        flash: {
+          '0%, 100%': { opacity: '0.25' },
+          '50%': { opacity: '1' },
+        },
+        ping: {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '75%, 100%': { transform: 'scale(2)', opacity: '0' },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

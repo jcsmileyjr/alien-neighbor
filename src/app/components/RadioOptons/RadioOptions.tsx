@@ -9,7 +9,7 @@ export default function RadioOptions({ name, label, options, errors, register }:
                 <div className="w-full" key={`${name}-${option.split(' ').slice(0, 2).join(' ')}`}>
                     <label className="cursor-pointer text-sm text-blueBlack flex flex-row gap-4 items-center" htmlFor={option.split(' ').slice(0, 2).join(' ')}>
                         <input {...register(name, { required: true })} id={option.split(' ').slice(0, 2).join(' ')} type="radio" className="peer hidden" />
-                        <div className="min-h-6 min-w-6 rounded-full border-2 border-blueBlack bg-white peer-checked:bg-spaceGold peer-checked:border-spaceGold transition-all"></div>
+                        <div className="peer-checked:animate-ping min-h-6 min-w-6 rounded-full border-2 border-blueBlack bg-white peer-checked:bg-spaceGold peer-checked:border-spaceGold transition-all"></div>
                         {option}
                     </label>
                 </div>
