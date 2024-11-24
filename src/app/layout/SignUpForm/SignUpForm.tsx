@@ -30,7 +30,7 @@ export default function UserInformation() {
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
         console.log(errors)
-        Swal.fire("Thanks for testing this app. The app is a WIP");
+        Swal.fire("Thanks for testing this app. The next page is a WIP");
     };
 
     return (
