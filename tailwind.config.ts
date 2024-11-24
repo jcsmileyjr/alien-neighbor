@@ -8,6 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        flash: 'flash 0.5s ease-in-out 3', // 2 flashes in 0.5 seconds
+      },
+      keyframes: {
+        flash: {
+          '0%, 100%': { opacity: '0.25' },
+          '50%': { opacity: '1' },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
