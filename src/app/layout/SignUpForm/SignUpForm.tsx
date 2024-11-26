@@ -20,9 +20,9 @@ export default function UserInformation() {
     const dispatch = useDispatch<AppDispatch>();
 
     // Testing
-    const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
-    const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
-    const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
+    // const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
+    // const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
+    // const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
 
     const onSubmit: SubmitHandler<User> = (data) => {
         dispatch(setName(data.user_name));
@@ -59,9 +59,9 @@ export default function UserInformation() {
             </form>
 
             {/* Testing */}
-            <p>{userName}</p>
+            {/* <p>{userName}</p>
             <p>{userIllegalName}</p>
-            <p>{userCommuteDistance}</p>
+            <p>{userCommuteDistance}</p> */}
             <SubmitButton handleSubmit={handleSubmit(onSubmit)} messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
         </section>
         
