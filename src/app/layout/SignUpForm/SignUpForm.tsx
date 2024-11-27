@@ -20,9 +20,9 @@ export default function UserInformation() {
     const dispatch = useDispatch<AppDispatch>();
 
     // Testing
-    const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
-    const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
-    const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
+    // const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
+    // const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
+    // const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
 
     const onSubmit: SubmitHandler<User> = (data) => {
         dispatch(setName(data.user_name));
@@ -37,7 +37,7 @@ export default function UserInformation() {
         <section>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4">
-                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4">Personal Information 
+                    <p className="text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4 mb-4">Personal Information 
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
                     <InputText errors={errors?.user_name } register={register} name="user_name" label="Legal Name" />
@@ -45,7 +45,7 @@ export default function UserInformation() {
                     <RadioOptions errors={errors.user_run_speed} options={running} register={register} name="user_run_speed"  label="Out of curiosity, how swiftly can you sprint while screaming for HELP on this charming spider-infested alien planet?'" />
                 </div>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4 mt-8">
-                    <p className="absolute -top-3 text-base text-blueBlack flex flex-row justify-between w-full pr-2  sm:pr-4">Living Space Preference
+                    <p className="text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4 mb-4">Living Space Preference
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
                     </p>
                     <div className="flex justify-end items-center gap-4 mb-2 text-blueBlack">
@@ -59,9 +59,9 @@ export default function UserInformation() {
             </form>
 
             {/* Testing */}
-            <p>{userName}</p>
+            {/* <p>{userName}</p>
             <p>{userIllegalName}</p>
-            <p>{userCommuteDistance}</p>
+            <p>{userCommuteDistance}</p> */}
             <SubmitButton handleSubmit={handleSubmit(onSubmit)} messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
         </section>
         
