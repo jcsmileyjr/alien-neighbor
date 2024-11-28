@@ -14,7 +14,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 // Testing
-import { useAppSelector } from "@/redux/store";
+// import { useAppSelector } from "@/redux/store";
 
 export default function UserInformation() {
     const router = useRouter() // Routes a user to another page
@@ -32,12 +32,9 @@ export default function UserInformation() {
         dispatch(setName(data.user_name));
         if(data.user_illegal_name) dispatch(setIllegalName(data.user_illegal_name));
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
-        console.log(data)
-        console.log(errors)
         setIsSubmitted(true);
         const timer = setTimeout(() => {
             router.push("/Settlement");
-            console.log('This will run after 4 seconds!');
         }, 4000);
         return () => clearTimeout(timer);
     };
