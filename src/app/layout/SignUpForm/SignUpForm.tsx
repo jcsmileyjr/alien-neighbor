@@ -10,12 +10,15 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import running from "@/app/lib/running";
 import Image from "next/image";
-import Swal from "sweetalert2";
+//import Swal from "sweetalert2";
+import { useRouter } from 'next/navigation';
 
 // Testing
 import { useAppSelector } from "@/redux/store";
 
 export default function UserInformation() {
+    const router = useRouter() // Routes a user to another page
+
     const {register, handleSubmit, formState: { errors }} = useForm<User>();
     const dispatch = useDispatch<AppDispatch>();
 
@@ -30,7 +33,8 @@ export default function UserInformation() {
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
         console.log(errors)
-        Swal.fire("Thanks for testing this app. The next page is a WIP");
+        // Swal.fire("Thanks for testing this app. The next page is a WIP");
+        router.push("/Settlement");
     };
 
     return (
