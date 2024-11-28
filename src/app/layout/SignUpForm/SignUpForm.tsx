@@ -10,7 +10,6 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { User } from "@/User";
 import running from "@/app/lib/running";
 import Image from "next/image";
-//import Swal from "sweetalert2";
 import { useRouter } from 'next/navigation';
 
 // Testing
@@ -33,8 +32,11 @@ export default function UserInformation() {
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
         console.log(errors)
-        // Swal.fire("Thanks for testing this app. The next page is a WIP");
-        router.push("/Settlement");
+        const timer = setTimeout(() => {
+            router.push("/Settlement");
+            console.log('This will run after 4 seconds!');
+        }, 4000);
+        return () => clearTimeout(timer);
     };
 
     return (
