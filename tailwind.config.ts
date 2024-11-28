@@ -11,6 +11,8 @@ export default {
       animation: {
         flash: 'flash 0.5s ease-in-out 3', // 2 flashes in 0.5 seconds
         ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) 3', // or set to infinite
+        fadeOut: 'fadeOut 1.5s ease-out forwards',
+        moveUp: 'moveUp 2s ease-out forwards',
       },
       keyframes: {
         flash: {
@@ -20,6 +22,14 @@ export default {
         ping: {
           '0%': { transform: 'scale(1)', opacity: '1' },
           '75%, 100%': { transform: 'scale(2)', opacity: '0' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0', display: 'none' },
+        },
+        moveUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
         },
       },
       colors: {

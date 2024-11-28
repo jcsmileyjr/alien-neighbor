@@ -11,6 +11,7 @@ import { User } from "@/User";
 import running from "@/app/lib/running";
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
+import { useState } from "react";
 
 // Testing
 import { useAppSelector } from "@/redux/store";
@@ -20,6 +21,7 @@ export default function UserInformation() {
 
     const {register, handleSubmit, formState: { errors }} = useForm<User>();
     const dispatch = useDispatch<AppDispatch>();
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     // Testing
     // const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
@@ -32,6 +34,7 @@ export default function UserInformation() {
         if(data.user_run_speed) dispatch(setRunSpeed(data.user_run_speed));
         console.log(data)
         console.log(errors)
+        setIsSubmitted(true);
         const timer = setTimeout(() => {
             router.push("/Settlement");
             console.log('This will run after 4 seconds!');
@@ -41,7 +44,7 @@ export default function UserInformation() {
 
     return (
         <section>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className={`transform ${isSubmitted ? 'animate-fadeOut' : ''}`} onSubmit={handleSubmit(onSubmit)}>
                 <div className="border border-offGray border-2 p-2 sm:p-4 rounded relative pt-4">
                     <p className="text-base text-blueBlack flex flex-row justify-between w-full pr-2 sm:pr-4 mb-4">Personal Information 
                         <Image className="opacity-25" src="/images/alien-icon.png" alt="Logo" width={15} height={15} />
@@ -68,7 +71,9 @@ export default function UserInformation() {
             {/* <p>{userName}</p>
             <p>{userIllegalName}</p>
             <p>{userCommuteDistance}</p> */}
-            <SubmitButton handleSubmit={handleSubmit(onSubmit)} messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
+            <div className={`transform ${isSubmitted ? 'animate-moveUp' : ''}`}>
+                <SubmitButton handleSubmit={handleSubmit(onSubmit)} messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
+            </div>
         </section>
         
     )
