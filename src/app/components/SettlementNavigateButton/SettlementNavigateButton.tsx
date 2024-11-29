@@ -8,7 +8,6 @@ const SettlementNavigateButton = () => {
     const nextPage = () => {
         Swal.fire("Thanks for testing this app. The next page is a WIP");
         setShowPolicy(true);
-        // router.push("/Settlement");
     };
     return (
     <button onClick={nextPage} type="button"  className={`w-full group bg-spaceGold border border-blueBlack border-2 opacity-75 hover:opacity-100 text-blueBlack py-2 px-4 rounded mt-8 ${showPolicy && 'opacity-100'}`}>
