@@ -7,8 +7,8 @@ export default function Settlement() {
         <div className="p-4 h-screen flex flex-col justify-between sm:mx-auto md:w-2/3 lg:w-1/2 2xl:w-1/3">
             <main className="flex flex-col gap-4 text-blueBlack">
                 <Header />
-                <figure>
-                    <Image src="/images/ceiling-spider.png" alt="Alien Spider Image" className="w-full h-auto " width={300} height={300} />
+                <figure className="sm:mx-auto">
+                    <Image src="/images/ceiling-spider.png" alt="Alien Spider Image" className="w-full " width={300} height={300} />
                     <figcaption className="font-bold">Welcome Colony Settler to Planet HotLunchHolla </figcaption>
                 </figure>
                 <div>
