@@ -13,10 +13,15 @@ export default {
         flash: 'flash 0.5s ease-in-out 3', // 2 flashes in 0.5 seconds
         ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) 3', // or set to infinite
         fadeOut: 'fadeOut 1.5s ease-out forwards',
+        fadeOut2: 'fadeOut 2s ease-out forwards 4',
+        fadeOut25: 'fadeOut 2.5s ease-out forwards 5',
+        fadeOut3: 'fadeOut 3s ease-out forwards 3',
+        fadeOut35: 'fadeOut 3.5s ease-out forwards 7',
+        fadeOut4: 'fadeOut 4s ease-out forwards 6',
         fadeIn: 'fadeIn 2s ease-out forwards',
         fadeInSecond: 'fadeIn 3s ease-out forwards',
         moveUp: 'moveUp 2s ease-out forwards',
-        scroll: 'scroll 3.5s linear infinite',
+        scroll: 'scroll 3s linear infinite',
       },
       keyframes: {
         scroll: { '0%': { backgroundPosition: '0% 0%' }, '100%': { backgroundPosition: '100% 100%' }, },
