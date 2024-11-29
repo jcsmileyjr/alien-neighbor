@@ -8,13 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: { 'spider-pattern': "url('/images/ceiling-spider.png')", },
       animation: {
         flash: 'flash 0.5s ease-in-out 3', // 2 flashes in 0.5 seconds
         ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) 3', // or set to infinite
         fadeOut: 'fadeOut 1.5s ease-out forwards',
+        fadeIn: 'fadeIn 2s ease-out forwards',
+        fadeInSecond: 'fadeIn 3s ease-out forwards',
         moveUp: 'moveUp 2s ease-out forwards',
+        scroll: 'scroll 3.5s linear infinite',
       },
       keyframes: {
+        scroll: { '0%': { backgroundPosition: '0% 0%' }, '100%': { backgroundPosition: '100% 100%' }, },
         flash: {
           '0%, 100%': { opacity: '0.25' },
           '50%': { opacity: '1' },
@@ -26,6 +31,11 @@ export default {
         fadeOut: {
           '0%': { opacity: '1' },
           '100%': { opacity: '0', display: 'none' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', display: 'none' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0' },
         },
         moveUp: {
           '0%': { transform: 'translateY(100%)' },
