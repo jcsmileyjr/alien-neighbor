@@ -1,13 +1,18 @@
 'use client';
-import Swal from "sweetalert2";
 import Image from "next/image";
 import {useState} from "react";
+import { useRouter } from 'next/navigation';
 
 const SettlementNavigateButton = () => {
+    const router = useRouter() // Routes a user to another page
+
     const [showPolicy, setShowPolicy] = useState(false);
     const nextPage = () => {
-        Swal.fire("Thanks for testing this app. The next page is a WIP");
+        const timer = setTimeout(() => {
+            router.push("/Survival");
+        }, 500);
         setShowPolicy(true);
+        return () => clearTimeout(timer);
     };
     return (
     <button onClick={nextPage} type="button"  className={`w-full group bg-spaceGold border border-blueBlack border-2 opacity-75 hover:opacity-100 text-blueBlack py-2 px-4 rounded mt-8 ${showPolicy && 'opacity-100'}`}>
