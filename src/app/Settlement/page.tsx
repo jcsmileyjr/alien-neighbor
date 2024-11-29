@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import Image from "next/image";
-import SubmitButton from "../components/SubmitButton/SubmitButton";
+import SettlementNavigateButton from "../components/SettlementNavigateButton/SettlementNavigateButton";
 
 export default function Settlement() {  
     return (
@@ -25,10 +25,7 @@ export default function Settlement() {
                     <p>There’s an eerie silence outside, occasionally broken by unsettling noises: a scuttling, scratching sound from the shadows beyond the glass walls. </p>
                     <p className="mt-4">Hidden within the alien landscape are massive, web-covered lairs. These are the territories of giant, human-eating spiders, their shapes barely visible in the darkness as they wait.</p>
                 </div>
-                <button type="button"  className="w-full group bg-spaceGold border border-blueBlack border-2 opacity-75 hover:opacity-100 text-blueBlack py-2 px-4 rounded mt-8">
-                    <p className=" flex flex-row gap-2 justify-center group-hover:hidden">Lock the Doors <Image  src="/images/alien-icon.png" alt="Logo" width={15} height={15} /></p>
-                    <p className="group-hover:block hidden">Sorry, local HOA has a no lock door policy</p>
-                </button>
+                <SettlementNavigateButton />
             </main>
             <footer className="text-center mt-4">
                 By JC Smiley
