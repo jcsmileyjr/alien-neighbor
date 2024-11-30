@@ -13,20 +13,12 @@ import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
-// Testing
-// import { useAppSelector } from "@/redux/store";
-
 export default function UserInformation() {
     const router = useRouter() // Routes a user to another page
 
     const {register, handleSubmit, formState: { errors }} = useForm<User>();
     const dispatch = useDispatch<AppDispatch>();
     const [isSubmitted, setIsSubmitted] = useState(false);
-
-    // Testing
-    // const userName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_name);
-    // const userIllegalName = useAppSelector((state: { userInformation: User }) => state.userInformation.user_illegal_name);
-    // const userCommuteDistance = useAppSelector((state:{ userInformation: User }) => state.userInformation.user_commute_distance);
 
     const onSubmit: SubmitHandler<User> = (data) => {
         dispatch(setName(data.user_name));
@@ -63,11 +55,6 @@ export default function UserInformation() {
                     <RadioValues name="pettingAliens" content="Have you fantasized about petting 6&apos;5 foot spiders in the dark where no one can hear you scream!" />
                 </div>
             </form>
-
-            {/* Testing */}
-            {/* <p>{userName}</p>
-            <p>{userIllegalName}</p>
-            <p>{userCommuteDistance}</p> */}
             <div className={`transform ${isSubmitted ? 'animate-moveUp' : ''}`}>
                 <SubmitButton handleSubmit={handleSubmit(onSubmit)} messageOne='Submit' messageTwo='to Aliens' notes="Pressing submit implies agreement to minor body injury waiver and being accidentally consumed. " />
             </div>

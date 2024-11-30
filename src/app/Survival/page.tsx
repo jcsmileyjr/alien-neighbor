@@ -3,7 +3,6 @@ import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import Header from "../components/Header/Header";
 import Swal from "sweetalert2";
-import { tap } from "node:test/reporters";
 
 export default function Survival() {
     const [introScene, setIntroScene] = useState<boolean>(true);
