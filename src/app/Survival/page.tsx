@@ -2,6 +2,7 @@
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import Header from "../components/Header/Header";
+import Swal from "sweetalert2";
 
 export default function Survival() {
     const [introScene, setIntroScene] = useState<boolean>(true);
@@ -18,7 +19,10 @@ export default function Survival() {
             setTaps(2);
         } else if (taps === 2) {
             setTaps(3);
+        } else {
+            Swal.fire("You have SURVIVED", "Thank you for playing my game", );
         }
+        
     }
     return (
         <div className="p-4 h-screen flex flex-col justify-between sm:mx-auto md:w-2/3 lg:w-1/2 2xl:w-1/3">
