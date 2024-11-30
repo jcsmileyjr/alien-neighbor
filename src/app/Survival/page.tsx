@@ -3,6 +3,7 @@ import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import Header from "../components/Header/Header";
 import Swal from "sweetalert2";
+import { tap } from "node:test/reporters";
 
 export default function Survival() {
     const [introScene, setIntroScene] = useState<boolean>(true);
@@ -11,7 +12,7 @@ export default function Survival() {
     useEffect(() => {
         const timer = setTimeout(() => { setIntroScene(false); }, 2000);
         return () => clearTimeout(timer);
-    })
+    }, [])
 
     const handleClick = () => {
         console.log("Tap: ", taps);
@@ -53,7 +54,7 @@ export default function Survival() {
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut2" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
-                                <button onClick={handleClick} type="button" className="bg-blueBlack border border-blueBlack border-2 text-spaceGold  w-20 p-1 opacity-25 rounded transform animate-fadeOut4">They are Coming</button>
+                                <button onClick={handleClick} type="button" className="bg-blueBlack border border-blueBlack border-2 text-spaceGold  w-20 p-1 opacity-25 rounded transform animate-fadeOut25">They are Coming</button>
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut4" width={75} height={75} />
@@ -61,19 +62,19 @@ export default function Survival() {
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
-                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="animate-fadeOut3" width={75} height={75} />
-                                <button onClick={handleClick} type="button" className="bg-blueBlack border border-blueBlack border-2 text-spaceGold w-20 p-1 opacity-25 rounded animate-fadeOut2">Run</button>
+                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
+                                <button onClick={handleClick} type="button" className="bg-blueBlack border border-blueBlack border-2 text-spaceGold w-20 p-1 opacity-25 rounded animate-fadeOut4">Run</button>
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut4" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
-                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="animate-fadeOut3" width={75} height={75} />
+                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut4" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <button onClick={handleClick} type="button" className="bg-blueBlack border border-blueBlack border-2 text-spaceGold w-20 p-1 opacity-25 rounded animate-fadeOut3">Dinner</button>
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut25" width={75} height={75} />
                                 <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut3" width={75} height={75} />
-                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="animate-fadeOut2" width={75} height={75} />
+                                <Image src="/images/orange-eye-spider.png" alt="hungry spider" className="transform animate-fadeOut2" width={75} height={75} />
                             </div>
 
                         </div>
