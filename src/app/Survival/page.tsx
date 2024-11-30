@@ -45,7 +45,7 @@ export default function Survival() {
                                 <Image src="/images/partial-open-door.png" alt="Partially Door" className="w-full " width={200} height={200} />
                             }
                                 {taps === 3 &&
-                                <Image src="/images/partial-open-door.png" alt="Half Opened Door" className="w-full " width={200} height={200} />
+                                <Image src="/images/half-open-door.png" alt="Half Opened Door" className="w-full " width={200} height={200} />
                             }
                             <figcaption className="font-bold">If you want to SURVIVE, Hit the moving button 3 times to OPEN the DOOR </figcaption>
                         </figure>
