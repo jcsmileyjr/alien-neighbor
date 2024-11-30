@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, use } from "react";
+import { useState, useEffect} from "react";
 import Image from "next/image";
 import Header from "../components/Header/Header";
 import Swal from "sweetalert2";
