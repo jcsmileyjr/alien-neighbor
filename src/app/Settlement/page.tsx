@@ -21,7 +21,7 @@ export default function Settlement() {
                     <p className="mt-4">Inside, it’s ultra-modern, blending glass, metal, and iridescent materials with minimalist, floating furniture. Soft, bioluminescent lights shift gently, casting a haunting glow over the streamlined spaces.</p>
                 </div>
                 <div>
-                    <p className="font-bold flex flex-row gap-2">Meet the extremely excited <span className="line-through">hungry </span> neighbors <Image className="opacity-75" src="/images/alien-icon.png" alt="Planet icon" width={15} height={15} /></p>
+                    <p className="font-bold flex flex-row gap-2">Meet the excited <span className="line-through">hungry </span> neighbors <Image className="opacity-75" src="/images/alien-icon.png" alt="Planet icon" width={15} height={15} /></p>
                     <p>There’s an eerie silence outside, occasionally broken by unsettling noises: a scuttling, scratching sound from the shadows beyond the glass walls. </p>
                     <p className="mt-4">Hidden within the alien landscape are massive, web-covered lairs. These are the territories of giant, human-eating spiders, their shapes barely visible in the darkness as they wait.</p>
                 </div>
